@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+footer {
+    color: #18bc9c;
+    text-align: center; 
+}
