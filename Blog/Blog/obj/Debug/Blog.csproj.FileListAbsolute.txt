@@ -66,4 +66,3 @@ c:\users\boris\documents\visual studio 2015\Projects\Blog\Blog\bin\Microsoft.Owi
 c:\users\boris\documents\visual studio 2015\Projects\Blog\Blog\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\boris\documents\visual studio 2015\Projects\Blog\Blog\obj\Debug\Blog.dll
 c:\users\boris\documents\visual studio 2015\Projects\Blog\Blog\obj\Debug\Blog.pdb
-C:\Users\Boris\documents\visual studio 2015\Projects\Blog\Blog\obj\Debug\Blog.csprojResolveAssemblyReference.cache
