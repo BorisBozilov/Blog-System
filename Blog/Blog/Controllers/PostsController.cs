@@ -20,16 +20,6 @@ namespace Blog.Controllers
             return View(db.Posts.ToList());
         }
 
-        public ActionResult Gallery()
-        {
-            List<Image> all = new List<Image>();
-            using (ApplicationDbContext dc = new ApplicationDbContext())
-            {
-                all = dc.Images.ToList();
-            }
-            return View(all);
-        }
-
         // GET: Posts/Details/5
         public ActionResult Details(int? id)
         {

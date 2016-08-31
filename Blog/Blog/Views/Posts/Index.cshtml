@@ -19,24 +19,7 @@
         
         <div class="body">
             @Html.DisplayFor(modelItem => item.Body)
-        </div>
-        
-        @*@{ 
-            int j = 0;
-            for (int i = 0; i < Model.Count(); i+=4)
-            {
-                j = i;
-                <tr>
-                    @while (j < i + 4 && j < Model.Count())
-                    {
-                        <td>
-                            <img src="data:image/png;base64,@Convert.ToBase64String(Model[j].ImageData,0,Model[j].ImageData.Length)" width="100"/>
-                        </td>
-                        j++;
-                    }
-                </tr>
-            }
-        }*@           
+        </div>           
         
         <div class="date">
             @Html.DisplayNameFor(model => model.Date):

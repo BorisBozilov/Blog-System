@@ -21,10 +21,6 @@ namespace Blog.Models
         [Required]
         public DateTime Date { get; set; }
 
-        public ApplicationUser Author { get; set; }
-
-        public ICollection<Image> Images { get; set; }
-
-        public ICollection<Comment> Comments { get; set; }
+        public ApplicationUser Author { get; set; }       
     }
 }
