@@ -8,6 +8,8 @@ namespace Blog.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Blog.Models.Post> Posts { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -16,8 +18,6 @@ namespace Blog.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
-        }
-
-        public System.Data.Entity.DbSet<Blog.Models.Post> Posts { get; set; }
+        }   
     }
 }

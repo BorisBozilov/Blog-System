@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Blog.Models;
 using System.Data.Entity;
 
-namespace Blog.Controllers
+namespace MVCBlog.Controllers
 {
     public class HomeController : Controller
     {

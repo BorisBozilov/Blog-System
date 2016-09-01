@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Blog.Models.Post>
+﻿@using Blog.Classes;
+@using Blog.Models;
+@model IEnumerable<Post>
 
 @{
     ViewBag.Title = "Index";
@@ -8,32 +10,54 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
-</p>                             
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            Оperations
+        </th>
+    </tr>
 
-@foreach (var item in Model)
-{
-    <div class="post">
-        <div class="title">
-            <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
-        </div>
-        
-        <div class="body">
-            @Html.DisplayFor(modelItem => item.Body)
-        </div>           
-        
-        <div class="date">
-            @Html.DisplayNameFor(model => model.Date):
-            @Html.DisplayFor(modelItem => item.Date)
-        </div>
-       
-         <td class="links">
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
-        
-        <br />
-        <br />
-        <br />
-    </div>
-}  
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Utils.CutText(item.Body)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @if (item.Author != null)
+                {
+                    @item.Author.UserName
+                }
+                else
+                {
+                    <i>(no author)</i>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
